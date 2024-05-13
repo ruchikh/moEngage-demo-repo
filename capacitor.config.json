@@ -1,0 +1,14 @@
+{
+  "appId": "com.demo.vegrow",
+  "appName": "vegrowDemo",
+  "webDir": "public",
+  "server": {
+    "url": "https://68dc-2405-201-7004-b8d6-44cf-8a48-3cb1-cebb.ngrok-free.app/",
+    "cleartext": true
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    }
+  }
+}
