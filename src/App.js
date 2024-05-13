@@ -1,22 +1,24 @@
-import logo from './logo.svg';
+import React,  { useEffect } from 'react';
 import './App.css';
+import useMoEngage from './hooks/useMoengage';
 
-function App() {
+const App = ()  => {
+  const tracker = useMoEngage();
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to My React Home Page</h1>
+        <p>This is a simple home page built with React.</p>
+      
+        <div>
+        <button style={{padding: '1rem', color: 'white', background:'#3c72c9', border: 'none', margin: '1rem', width: '9rem', fontWeight: 'bold'}} onClick={() => tracker('NOTIFIED')}>Get Notification</button>
+        <button  style={{padding: '1rem', color: 'white', background:'#3c72c9', border: 'none', width: '9rem', fontWeight: 'bold'}} onClick={() => tracker('Button-one')}>Button 2</button>
+        <button  style={{padding: '1rem', color: 'white', background:'#3c72c9', border: 'none', margin: '1rem', width: '9rem', fontWeight: 'bold'}} onClick={() => tracker('Button-two')}>Button 3</button>
+        </div>
+      <div className="home-page">
+    </div>
       </header>
     </div>
   );

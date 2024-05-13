@@ -2,4 +2,10 @@ include ':app'
 include ':capacitor-cordova-android-plugins'
 project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
 
+include ':capacitor-moengage-core'
+project(':capacitor-moengage-core').projectDir = new File('../node_modules/capacitor-moengage-core/android')
+
+include ':capacitor-push-notifications'
+project(':capacitor-push-notifications').projectDir = new File('../node_modules/@capacitor/push-notifications/android')
+
 apply from: 'capacitor.settings.gradle'

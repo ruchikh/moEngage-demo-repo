@@ -3,7 +3,7 @@
   "appName": "vegrowDemo",
   "webDir": "public",
   "server": {
-    "url": "https://68dc-2405-201-7004-b8d6-44cf-8a48-3cb1-cebb.ngrok-free.app/",
+    "url": "https://a533-2405-201-7004-b8d6-44cf-8a48-3cb1-cebb.ngrok-free.app",
     "cleartext": true
   },
   "plugins": {
