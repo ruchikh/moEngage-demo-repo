@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### To create Ngrok url to run app locally
+
+Follow the link [https://ngrok.com/docs/getting-started/], user have to signup and create auth token after that use that token to create url. Use that URL in capacitor.config.json.
+You will get URL here https://dashboard.ngrok.com/cloud-edge/endpoints
+"server":
+"url": "https://a533-2405-201-7004-b8d6-44cf-8a48-3cb1-cebb.ngrok-free.app",
+"cleartext": true
+},
+
+### Run below command in terminal to run the app locally
+
+ngrok http 9000 --host-header="localhost:9000"
+ngrok http --host-header=rewrite 9000
