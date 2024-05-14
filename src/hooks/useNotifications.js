@@ -6,6 +6,7 @@ import { MoECapacitorCore } from "capacitor-moengage-core";
 
 import { EventPathMapping } from "../eventPathMapping";
 
+//To use this file you need to initialize firebase and create fcm token
 const useNotifications = () => {
   const [fcmToken, setFcmToken] = useState({});
   const addListeners = async () => {
@@ -44,7 +45,7 @@ const useNotifications = () => {
       });
       if (permStatus.receive === "granted") {
         MoECapacitorCore.passFcmPushToken({
-          token: fcmToken, //frm token should be added here
+          token: fcmToken, //fcm token should be added here
           appId: "Q5YBYJOT6NU535WZD1JVOIDV",
         });
         MoECapacitorCore.setupNotificationChannelsAndroid();
