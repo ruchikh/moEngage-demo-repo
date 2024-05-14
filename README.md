@@ -71,12 +71,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### To create Ngrok url to run app locally
 
-Follow the link [https://ngrok.com/docs/getting-started/], user have to signup and create auth token after that use that token to create url. Use that URL in capacitor.config.json.
-You will get URL here https://dashboard.ngrok.com/cloud-edge/endpoints
-"server":
-"url": "https://a533-2405-201-7004-b8d6-44cf-8a48-3cb1-cebb.ngrok-free.app",
+To set up Ngrok to run your app locally and create a tunnel to access it over the internet, follow these steps:
+
+Sign up and Authenticate with Ngrok:
+
+Go to https://ngrok.com/docs/getting-started/ and sign up for a Ngrok account if you haven't already.
+After signing up, create an authentication token in your Ngrok account settings.
+Create Ngrok URL:
+
+Once you have your authentication token, use it to create a Ngrok URL.
+Run the command ngrok http 9000 --host-header="localhost:9000" in your terminal.
+This command starts Ngrok and creates a secure tunnel to your local server running on port 9000.
+Use Ngrok URL in Capacitor Configuration:
+
+After running the command, you will see a Ngrok URL generated in your terminal.
+Copy this URL and use it in your capacitor.config.json file under the "server" section.
+Set the URL value to the Ngrok URL you obtained, for example:
+json
+Copy code
+"server": {
+"url": "https://your-ngrok-url.ngrok.io",
 "cleartext": true
-},
+}
+This allows Capacitor to use the Ngrok URL when accessing your local server during development.
+Access Ngrok Dashboard:
+
+You can also access the Ngrok dashboard at https://dashboard.ngrok.com/ to manage your tunnels.
+Your Ngrok URL will be available under the "Endpoints" section of the dashboard.
+By following these steps, you'll be able to run your app locally and access it over the internet using Ngrok. This is especially useful for testing and demo purposes.
 
 ### Run below command in terminal to run the app locally
 
